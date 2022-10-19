@@ -16,7 +16,17 @@ Its purpose is to:
 
 * [Noto Emoji](https://github.com/googlefonts/noto-emoji) provides a replacement for the emoji font
   - Noto Emoji (Stands for No Tofu) is an open source (Open Font License 1.1) emoji library
-  - [_NotoColorEmoji.ttf_](https://github.com/googlefonts/noto-emoji/raw/main/fonts/NotoColorEmoji.ttf) is a Unicode compliant color emoji font
+  - [_NotoColorEmoji.ttf_](https://github.com/warren-bank/crx-GitHub-emoji-polyfill/raw/greasemonkey-userscript/font/1-Noto-Color-Emoji/1-full/NotoColorEmoji.ttf) is a Unicode compliant color emoji font
+    * size: 9.9 MB
+
+#### Notes:
+
+* the use of a polyfill to replace a missing emoji font is an inefficient workaround
+* when possible, it would be better to install the missing emoji font onto the operating system:
+  - [_Apple_Color_Emoji.ttf_](https://github.com/warren-bank/crx-GitHub-emoji-polyfill/raw/greasemonkey-userscript/font/2-Apple-Color-Emoji/1-full/Apple_Color_Emoji.ttf)
+    * size: 44 MB
+  - [_Segoe_UI_Emoji.ttf_](https://github.com/warren-bank/crx-GitHub-emoji-polyfill/raw/greasemonkey-userscript/font/3-Segoe-UI-Emoji/1-full/Segoe_UI_Emoji.ttf)
+    * size: 660 KB
 
 #### Legal:
 
