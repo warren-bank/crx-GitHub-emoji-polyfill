@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         GitHub emoji polyfill
 // @description  Inject a CSS polyfill to add an emoji font.
-// @version      1.0.0
+// @version      1.0.1
 // @include      /^https?:\/\/(?:[^\.\/]*\.)*github\.com\/.*$/
 // @icon         https://github.githubassets.com/favicons/favicon.png
 // @run-at       document-end
@@ -39,13 +39,20 @@ var should_add_polyfill = function() {
 }
 
 var add_polyfill = function() {
-  var emoji_font_url, inline_css
+  var emoji_font_url
 
   emoji_font_url = GM_getResourceURL('emoji_font')
 
   if ((typeof emoji_font_url === 'object') && (emoji_font_url instanceof Promise)) {
-    emoji_font_url = Promise.resolve(emoji_font_url)
+    emoji_font_url.then(add_inline_css)
   }
+  else {
+    add_inline_css(emoji_font_url)
+  }
+}
+
+var add_inline_css = function(emoji_font_url) {
+  var inline_css
 
   if ((typeof emoji_font_url === 'string') && emoji_font_url.length) {
     inline_css = `
