@@ -1,0 +1,2 @@
+https://github.com/googlefonts/noto-emoji/raw/c79f4f80c53034c3d50a0ed90447ec4903cb5683/fonts/NotoColorEmoji.ttf
+  date: Sep 20, 2022
